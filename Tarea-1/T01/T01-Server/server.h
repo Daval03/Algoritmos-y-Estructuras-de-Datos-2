@@ -16,7 +16,6 @@ using namespace std;
  * @title Server de la aplicacion
  * @date 1/3/20
  */
-class QTcpSocket;
 /**
  * @brief The Server class
  */

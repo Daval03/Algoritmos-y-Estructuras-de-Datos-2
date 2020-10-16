@@ -4,8 +4,7 @@
  * @brief Widget::Widget lee el socket, y muestra la info
  * @param parent, un null_prt
  */
-Widget::Widget(QWidget *parent)
-    : QWidget(parent),ui(new Ui::Widget){
+Widget::Widget(QWidget *parent):QWidget(parent),ui(new Ui::Widget){
     ui->setupUi(this);
     mSocket=new QTcpSocket(this);
     mSocket->connectToHost("localhost",12345);
