@@ -22,6 +22,7 @@ public:
     QTcpSocket *mSocket;
     int order;
     int resp;
+    bool recibioInfo;
     void getInfo(int id);
 };
 

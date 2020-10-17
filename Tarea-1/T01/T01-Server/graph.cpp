@@ -15,7 +15,7 @@ void Graph::addEdge(unsigned int origen, unsigned int destino,int peso) {
     arcs[*pos].peso = peso;
     (*pos)++;
 }
-void ** Graph::floyd_warshall() {
+void ** Graph::floyd_warshall(){
     unsigned int i, j, k;
     int **distances = static_cast<int **>(malloc(order * sizeof(int *)));
     for (i = 0; i < order; i++) {

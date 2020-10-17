@@ -20,28 +20,33 @@ class Widget : public QWidget{
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-private slots:
     /**
-     * @brief on_Run_clicked, mandar el json al server
+     * @brief mSocket la clase del socket
      */
-    void on_Run_clicked();
-    void on_Quitar_clicked();
+    QTcpSocket *mSocket;
 
-private:
-    /**
-     * @brief order Son los nodos totales del grafo
-     */
-    int order;
-    /**
-     * @brief StartedFlag Bandera para saber cuando inicializar el grafo por primera vez
-     */
-    bool StartedFlag=true;
     /**
      * @brief vertOrigen Nodo de origen
      * @brief vertFinal Nodo de destino
      */
     int vertOrigen;
     int vertFinal;
+
+    /**
+     * @brief order Son los nodos totales del grafo
+     */
+    int order;
+private slots:
+    /**
+     * @brief on_Run_clicked, mandar el json al server
+     */
+    void on_Run_clicked();
+    void on_Quitar_clicked();
+private:
+    /**
+     * @brief StartedFlag Bandera para saber cuando inicializar el grafo por primera vez
+     */
+    bool StartedFlag=true;
     /**
      * @brief mostrarDatos Metodo para mostrar la info en la interfaz
      */
@@ -58,10 +63,5 @@ private:
      * @brief ui, la clase de interfaz
      */
     Ui::Widget *ui;
-    /**
-     * @brief mSocket la clase del socket
-     */
-    QTcpSocket *mSocket;
-
 };
 #endif // WIDGET_H

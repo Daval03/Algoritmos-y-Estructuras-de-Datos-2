@@ -22,5 +22,6 @@ void Cliente::getInfo(int id){
         QJsonObject jsonObject = jsonArray.first().toObject();
         resp=jsonObject.value("Resultado").toInt();
         order=jsonObject.value("Order").toInt();
+        recibioInfo=true;
     });
 }
